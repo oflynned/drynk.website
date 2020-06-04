@@ -31,8 +31,8 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "heroku-postbuild": "gatsby build",
-    "start:dev": "npm run develop",
-    "start:prod": "gatsby serve",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
