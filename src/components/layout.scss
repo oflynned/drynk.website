@@ -1,0 +1,10 @@
+div {
+  overflow-x: hidden;
+  max-height: 100vh;
+
+  &.layout {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
