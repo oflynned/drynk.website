@@ -14,7 +14,7 @@ const IndexPage = () => (
     <SEO title="Home"/>
     <Layout>
       <Header/>
-      <div className={"layout-holder"}>
+      <div className={"overview"}>
         <div className={"layout-content"}>
           <img className={"logo"} src={logo} alt={"App logo"}/>
           <h2>drynk</h2>

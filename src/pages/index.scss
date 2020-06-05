@@ -8,19 +8,18 @@
     padding: 0;
   }
 
-  .layout-holder {
+  .overview {
     display: flex;
     text-align: center;
     margin: 0 auto;
     max-width: 640px;
-    height: calc(100% - 84px);
+    height: 100vh;
 
     .layout-content {
       align-self: center;
       overflow: hidden;
 
       .logo {
-        overflow: hidden;
         margin: 16px 0;
         height: 128px;
         width: 128px;
@@ -29,14 +28,14 @@
       h1 {
         color: $gunmetal;
         margin: 24px 0;
-        line-height: 40px;
-        font-size: 32px;
+        line-height: 3rem;
+        font-size: 2rem;
       }
 
       h2 {
         color: $default-text;
-        line-height: 32px;
-        font-size: 32px;
+        line-height: 1.5rem;
+        font-size: 2rem;
       }
     }
   }
