@@ -9,13 +9,14 @@
   }
 
   .overview {
+    margin: auto;
     display: flex;
     text-align: center;
-    margin: 0 auto;
-    max-width: 640px;
+    max-width: 720px;
     height: 100vh;
 
     .layout-content {
+      margin: 16px;
       align-self: center;
       overflow: hidden;
 
