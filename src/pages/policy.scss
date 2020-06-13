@@ -1,0 +1,44 @@
+@import "../components/colours";
+
+.page {
+  * {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+
+  .overview {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    max-width: 1200px;
+    min-height: calc(100vh - 68px);
+
+    .layout-content {
+      margin: 16px;
+      align-self: center;
+      overflow: hidden;
+
+      .logo {
+        margin: 16px 0;
+        height: 128px;
+        width: 128px;
+      }
+
+      h1 {
+        color: $gunmetal;
+        margin: 16px 0;
+        line-height: 3rem;
+        font-size: 2rem;
+      }
+
+      p {
+        margin: 8px 0;
+        color: $gunmetal;
+        line-height: 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
