@@ -10,17 +10,7 @@ export const Footer = () => {
           <a href={"https://syzible.com"}>Syzible</a>
         </div>
         <div className={"container"}>
-          <ul>
-            <li>
-              <Link to={"/privacy-policy"}>Privacy Policy</Link>
-            </li>
-            <li>
-              <Link to={"/terms-of-service"}>Terms of Policy</Link>
-            </li>
-            <li>
-              <Link to={"/gdpr-policy"}>GDPR Policy</Link>
-            </li>
-          </ul>
+          <Link to={"/privacy-policy"}>Privacy Policy</Link>
         </div>
       </div>
     </footer>
