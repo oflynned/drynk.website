@@ -8,9 +8,10 @@ import { Header } from "../components/header"
 import { Layout } from "../components/layout"
 import { GooglePlayBadge } from "../components/google-play.badge"
 import logo from "../images/logo.svg"
+import { Footer } from "../components/footer"
 
 const IndexPage = () => (
-  <div className={"index-page"}>
+  <div className={"page"}>
     <SEO title="Home"/>
     <Layout>
       <Header/>
@@ -18,10 +19,11 @@ const IndexPage = () => (
         <div className={"layout-content"}>
           <img className={"logo"} src={logo} alt={"App logo"}/>
           <h2>drynk</h2>
-          <h1>Become healthier and discover insights in real-time about your alcohol intake</h1>
+          <h1>Become healthier and discover insights about your alcohol intake</h1>
           <GooglePlayBadge/>
         </div>
       </div>
+      <Footer/>
     </Layout>
   </div>
 )

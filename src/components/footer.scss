@@ -1,0 +1,48 @@
+@import "../components/colours.scss";
+
+footer {
+  background: #FAFAFA;
+
+  * {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 0 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .content {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0 auto;
+    padding: 32px 0;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      li {
+        margin: 8px 0;
+      }
+    }
+
+    a {
+      color: $gunmetal;
+      text-decoration: none;
+      margin: 0 8px;
+
+      &:hover {
+        transition: 0.5s;
+        cursor: pointer;
+        color: $medium-slate-blue;
+      }
+    }
+  }
+}
