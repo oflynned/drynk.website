@@ -11,7 +11,7 @@ import { Footer } from "../components/footer"
 const IndexPage = () => (
   <div className={"page"}>
     <SEO title="Privacy Policy"/>
-    <Layout >
+    <Layout>
       <Header/>
       <div className={"overview"}>
         <div className={"layout-content"}>
