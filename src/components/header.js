@@ -1,7 +1,10 @@
 import React from "react"
-import "./header.scss"
+import { Link } from "gatsby"
 import { GooglePlayBadge } from "./google-play.badge"
+
 import logo from "../images/logo.svg"
+
+import "./header.scss"
 
 export const Header = () => {
   return (
@@ -9,7 +12,7 @@ export const Header = () => {
       <div className={"content"}>
         <div className={"container"}>
           <img className={"logo"} src={logo} alt={"App logo"}/>
-          <h3>drynk</h3>
+          <h3><Link to={"/"}>drynk</Link></h3>
         </div>
         <div className={"container"}>
           <GooglePlayBadge/>

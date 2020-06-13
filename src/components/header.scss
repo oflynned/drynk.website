@@ -1,13 +1,18 @@
+@import "./colours";
+
 header {
-  top: 0;
-  position: sticky;
   padding: 4px 0;
   width: 100%;
   background: white;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 
-  * {
-    font-family: 'Nunito Sans', sans-serif;
+  a {
+   text-decoration: none;
+    color: $gunmetal;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .container {
@@ -23,7 +28,6 @@ header {
   }
 
   .content {
-    font-family: "Nunito Sans", sans-serif;
     margin: 0 auto;
     max-width: 1200px;
     display: flex;

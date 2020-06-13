@@ -3,10 +3,6 @@
 footer {
   background: #FAFAFA;
 
-  * {
-    font-family: 'Nunito Sans', sans-serif;
-  }
-
   .container {
     display: flex;
     justify-content: start;
@@ -15,12 +11,16 @@ footer {
 
   .content {
     font-family: "Nunito Sans", sans-serif;
-    margin: 0 auto;
+    margin: auto;
     padding: 32px 0;
     max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    > .container {
+      margin: 0 8px;
+    }
 
     a {
       color: $gunmetal;

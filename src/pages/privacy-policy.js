@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import "normalize.css"
-import "./policy.scss"
+import "./privacy-policy.scss"
 
 import SEO from "../components/seo"
 import { Header } from "../components/header"
@@ -22,7 +22,7 @@ const IndexPage = () => {
   }, [])
 
   return (
-    <div className={"page"}>
+    <div className={"policy-page"}>
       <SEO title="Privacy Policy"/>
       <Header/>
       <Layout>

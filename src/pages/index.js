@@ -7,11 +7,12 @@ import SEO from "../components/seo"
 import { Header } from "../components/header"
 import { Layout } from "../components/layout"
 import { GooglePlayBadge } from "../components/google-play.badge"
-import logo from "../images/logo.svg"
 import { Footer } from "../components/footer"
 
+import logo from "../images/logo.svg"
+
 const IndexPage = () => (
-  <div className={"page"}>
+  <div className={"index-page"}>
     <SEO title="Home"/>
     <Layout>
       <Header/>
