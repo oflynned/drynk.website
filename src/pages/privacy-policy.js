@@ -1,21 +1,27 @@
-import React, { useEffect, useState } from "react"
+import * as React from "react"
+import { useEffect, useState } from "react"
 
 import "normalize.css"
-import "./privacy-policy.scss"
 
 import SEO from "../components/seo"
 import { Header } from "../components/header"
 import { Layout } from "../components/layout"
 import { Footer } from "../components/footer"
+import { PrivacyPolicyRepo } from "../privacy-policy/repo"
+
+import "./privacy-policy.scss"
 
 const IndexPage = () => {
+  const repo = new PrivacyPolicyRepo()
+
+  const [version, setVersion] = useState(undefined)
   const [dateEffective, setDateEffective] = useState(undefined)
 
   useEffect(() => {
     const fetchData = async () => {
-      const payload = await fetch("https://drynk-api.syzible.com/privacy/version")
-      const data = await payload.json()
-      setDateEffective(data.dateEffective)
+      const { version, dateEffective } = await repo.getPolicyDetails()
+      setVersion(version)
+      setDateEffective(dateEffective)
     }
 
     fetchData()
@@ -30,6 +36,7 @@ const IndexPage = () => {
           <div className={"layout-content"}>
             <section>
               <h1>Privacy Policy</h1>
+              <p>Version: {version || "..."}</p>
               <p>Effective: {dateEffective || "..."}</p>
 
               <p>We believe that transparency is the key to any healthy relationship. At drynk, we’re all about healthy.
@@ -38,6 +45,13 @@ const IndexPage = () => {
               <p>Here we describe the privacy practices for our devices, applications, software, websites, APIs,
                 products, and services (the “Services”). You will learn about the data we collect, how we use it, the
                 controls we give you over your information, and the measures we take to keep it safe.</p>
+            </section>
+
+            <section>
+              <h1>Disclaimer</h1>
+              <p>Please enjoy responsibly, always have a plan, and do NOT drink & drive. The responsibility falls solely
+                on the user, driving at any level intoxication is illegal. Follow all local laws. For entertainment
+                purposes only. The most accurate ways to calculate BAC is a blood test, second being a breathalyzer.</p>
             </section>
 
             <section>
@@ -348,6 +362,46 @@ const IndexPage = () => {
                 advertising services as described in the Analytics and Advertising Services Provided By Others section.
                 To learn more about how these partners collect data and your options for controlling the use of your
                 information for interest-based advertising, please read our Cookie Use statement</p>
+
+              <h3>Categories of information we collect, use and disclose for business purposes</h3>
+              <ul>
+                <li>Identifiers, such as name or username, email address, IP address, account ID, device ID, cookie ID,
+                  and other similar identifiers
+                </li>
+                <li>Demographic information, such as gender, age, health information, physical characteristics or
+                  description, which may be protected by law
+                </li>
+                <li>Commercial information, including your payment information and records of the Services or devices
+                  you purchased, obtained, or considered (for example, if you added them to your shopping cart on the
+                  Drynk store but did not purchase them).
+                </li>
+                <li>Biometric information, such as approximated blood alcohol content and any related information to the
+                  use of alcohol intake to determine insights
+                </li>
+                <li>Internet or other electronic network activity information, such as the usage data we receive when
+                  you access or use our Services. This includes information about your interactions with the Services
+                  and about the devices and computers you use to access the Services.
+                </li>
+                <li>Electronic, visual, or similar information, such as your profile photo or other photos.</li>
+                <li>Professional or employment related information, including any information (like your name, email
+                  address, or similar information) that your employer provides to us so that we can invite you to
+                  participate in or determine your eligibility for Drynk Services that they offer to their employees.
+                </li>
+                <li>Inferences drawn from any of the above, including the number of calories you burned, alcohol intake,
+                  consumption insights, and personalised activity goals.
+                </li>
+              </ul>
+
+              <p>We never sell the personal information of our users. We do work with partners who provide us with
+                advertising services as described in the Analytics and Advertising Services Provided By Others section.
+                To learn more about how these partners collect data and your options for controlling the use of your
+                information for interest-based advertising, please read our Cookie Use statement</p>
+            </section>
+
+            <section>
+              <h1>Changes to this policy</h1>
+              <p>We will notify you before we make material changes to this policy and give you an opportunity to review
+                the revised policy before deciding if you would like to continue to use the Services.</p>
             </section>
 
             <section>
