@@ -1,6 +1,6 @@
 export class PrivacyPolicyRepo {
   async getPolicyDetails(): Promise<{ version: number, dateEffective: string }> {
-    const payload = await fetch("https://drynk-api.syzible.com/privacy/version")
+    const payload = await fetch("https://api.drynk.app/v1/privacy/version")
     const data = await payload.json()
 
     return {
