@@ -24,7 +24,7 @@ const IndexPage = () => {
     }
 
     fetchData()
-  }, [])
+  }, [repo])
 
   return (
     <div className={"policy-page"}>
