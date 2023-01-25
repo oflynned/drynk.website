@@ -10,11 +10,12 @@ import { PrivacyPolicyRepo } from "../privacy-policy/repo"
 
 import "./privacy-policy.scss"
 
-const IndexPage = () => {
-  const repo = new PrivacyPolicyRepo()
+const repo = new PrivacyPolicyRepo()
 
-  const [version, setVersion] = useState(undefined)
-  const [dateEffective, setDateEffective] = useState(undefined)
+const IndexPage = () => {
+
+  const [version, setVersion] = useState(null)
+  const [dateEffective, setDateEffective] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
