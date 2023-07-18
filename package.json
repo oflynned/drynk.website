@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "prettier": "2.7.1",
-    "webpack": "5.74.0"
+    "webpack": "5.88.2"
   },
   "scripts": {
     "build": "gatsby build",
